@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2rem;
+}
+
+#anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.anime-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: calc(33.333% - 2rem);
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.anime-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.anime-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Tilt Effect on Hover */
+.anime-item.tilt {
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.1s ease;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    background-size: 200% 100%;
+    transition: background-position 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-position: 100% 0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
